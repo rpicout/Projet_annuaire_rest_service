@@ -1,7 +1,5 @@
 package ima.entities;
 
-import java.util.Date;
-
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.hateoas.ResourceSupport;
 
@@ -15,40 +13,40 @@ public class Etablissement extends ResourceSupport {
 	private String Adresse_1;
 	private String Adresse_2;
 	private String Adresse_3;
-	private int Code_postal; 
-	private int Code_commune;
+	private String Code_postal; 
+	private String Code_commune;
 	private String Nom_commune;
-	private int Code_departement;
-	private int Code_academie;
-	private int Code_region;
-	private int Ecole_maternelle; 
-	private int Ecole_elementaire;
-	private int Voie_generale;
-	private int Voie_technologique;
-	private int Voie_professionnelle;
+	private String Code_departement;
+	private String Code_academie;
+	private String Code_region;
+	private String Ecole_maternelle; 
+	private String Ecole_elementaire;
+	private String Voie_generale;
+	private String Voie_technologique;
+	private String Voie_professionnelle;
 	private String Telephone;
 	private String Fax;
 	private String Web;
 	private String Mail;
-	private int Restauration;
-	private int Hebergement;
-	private int ULIS;
-	private int Apprentissage; 
-	private int Segpa; 
-	private int Section_arts; 
-	private int Section_cinema;	
-	private int Section_theatre;
-	private int Section_sport; 	
-	private int Section_internationale;
-	private int Section_europeenne;
-	private int Lycee_Agricole;
-	private int Lycee_militaire;
-	private int Lycee_des_metiers;
-	private int Post_BAC; 
+	private String Restauration;
+	private String Hebergement;
+	private String ULIS;
+	private String Apprentissage; 
+	private String Segpa; 
+	private String Section_arts; 
+	private String Section_cinema;	
+	private String Section_theatre;
+	private String Section_sport; 	
+	private String Section_Stringernationale;
+	private String Section_europeenne;
+	private String Lycee_Agricole;
+	private String Lycee_militaire;
+	private String Lycee_des_metiers;
+	private String Post_BAC; 
 	private String Appartenance_Education_Prioritaire;
-	private int GRETA;//TODO c'est peut etre un autre Type
+	private String GRETA;//TODO c'est peut etre un autre Type
 	private String SIREN_SIRET;
-	private int Nombre_d_eleves;
+	private String Nombre_d_eleves;
 	private String Fiche_onisep;
 	private String Type_contrat_prive;
 	private String Libelle_departement;
@@ -61,14 +59,14 @@ public class Etablissement extends ResourceSupport {
 	private String latitude;
 	private String longitude;
 	private String precision_localisation;
-	private Date date_ouverture;
-	private Date date_maj_ligne; 
+	private String String_ouverture;
+	private String String_maj_ligne; 
 	private String etat;
 	private String ministere_tutelle;
-	private int etablissement_multi_lignes;
-	private int rpi_concentre; 
+	private String etablissement_multi_lignes;
+	private String rpi_concentre; 
 	private String rpi_disperse; 
-	private int code_nature;
+	private String code_nature;
 	private String libelle_nature;
 	
 	
@@ -121,17 +119,17 @@ public class Etablissement extends ResourceSupport {
 		Adresse_3 = adresse_3;
 	}
 	
-	public int getCode_postal() {
+	public String getCode_postal() {
 		return Code_postal;
 	}
-	public void setCode_postal(int code_postal) {
+	public void setCode_postal(String code_postal) {
 		Code_postal = code_postal;
 	}
 	
-	public int getCode_commune() {
+	public String getCode_commune() {
 		return Code_commune;
 	}
-	public void setCode_commune(int code_commune) {
+	public void setCode_commune(String code_commune) {
 		Code_commune = code_commune;
 	}
 	
@@ -142,59 +140,59 @@ public class Etablissement extends ResourceSupport {
 		Nom_commune = nom_commune;
 	}
 	
-	public int getCode_departement() {
+	public String getCode_departement() {
 		return Code_departement;
 	}
-	public void setCode_departement(int code_departement) {
+	public void setCode_departement(String code_departement) {
 		Code_departement = code_departement;
 	}
 	
-	public int getCode_academie() {
+	public String getCode_academie() {
 		return Code_academie;
 	}
-	public void setCode_academie(int code_academie) {
+	public void setCode_academie(String code_academie) {
 		Code_academie = code_academie;
 	}
 	
-	public int getCode_region() {
+	public String getCode_region() {
 		return Code_region;
 	}
-	public void setCode_region(int code_region) {
+	public void setCode_region(String code_region) {
 		Code_region = code_region;
 	}
 	
-	public int getEcole_maternelle() {
+	public String getEcole_maternelle() {
 		return Ecole_maternelle;
 	}
-	public void setEcole_maternelle(int ecole_maternelle) {
+	public void setEcole_maternelle(String ecole_maternelle) {
 		Ecole_maternelle = ecole_maternelle;
 	}
 	
-	public int getEcole_elementaire() {
+	public String getEcole_elementaire() {
 		return Ecole_elementaire;
 	}
-	public void setEcole_elementaire(int ecole_elementaire) {
+	public void setEcole_elementaire(String ecole_elementaire) {
 		Ecole_elementaire = ecole_elementaire;
 	}
 	
-	public int getVoie_generale() {
+	public String getVoie_generale() {
 		return Voie_generale;
 	}
-	public void setVoie_generale(int voie_generale) {
+	public void setVoie_generale(String voie_generale) {
 		Voie_generale = voie_generale;
 	}
 	
-	public int getVoie_technologique() {
+	public String getVoie_technologique() {
 		return Voie_technologique;
 	}
-	public void setVoie_technologique(int voie_technologique) {
+	public void setVoie_technologique(String voie_technologique) {
 		Voie_technologique = voie_technologique;
 	}
 	
-	public int getVoie_professionnelle() {
+	public String getVoie_professionnelle() {
 		return Voie_professionnelle;
 	}
-	public void setVoie_professionnelle(int voie_professionnelle) {
+	public void setVoie_professionnelle(String voie_professionnelle) {
 		Voie_professionnelle = voie_professionnelle;
 	}
 	
@@ -226,108 +224,108 @@ public class Etablissement extends ResourceSupport {
 		Mail = mail;
 	}
 	
-	public int getRestauration() {
+	public String getRestauration() {
 		return Restauration;
 	}
-	public void setRestauration(int restauration) {
+	public void setRestauration(String restauration) {
 		Restauration = restauration;
 	}
 	
-	public int getHebergement() {
+	public String getHebergement() {
 		return Hebergement;
 	}
-	public void setHebergement(int hebergement) {
+	public void setHebergement(String hebergement) {
 		Hebergement = hebergement;
 	}
 	
-	public int getULIS() {
+	public String getULIS() {
 		return ULIS;
 	}
-	public void setULIS(int uLIS) {
+	public void setULIS(String uLIS) {
 		ULIS = uLIS;
 	}
 	
-	public int getApprentissage() {
+	public String getApprentissage() {
 		return Apprentissage;
 	}
-	public void setApprentissage(int apprentissage) {
+	public void setApprentissage(String apprentissage) {
 		Apprentissage = apprentissage;
 	}
 	
-	public int getSegpa() {
+	public String getSegpa() {
 		return Segpa;
 	}
-	public void setSegpa(int segpa) {
+	public void setSegpa(String segpa) {
 		Segpa = segpa;
 	}
 	
-	public int getSection_arts() {
+	public String getSection_arts() {
 		return Section_arts;
 	}
-	public void setSection_arts(int section_arts) {
+	public void setSection_arts(String section_arts) {
 		Section_arts = section_arts;
 	}
 	
-	public int getSection_cinema() {
+	public String getSection_cinema() {
 		return Section_cinema;
 	}
-	public void setSection_cinema(int section_cinema) {
+	public void setSection_cinema(String section_cinema) {
 		Section_cinema = section_cinema;
 	}
 	
-	public int getSection_theatre() {
+	public String getSection_theatre() {
 		return Section_theatre;
 	}
-	public void setSection_theatre(int section_theatre) {
+	public void setSection_theatre(String section_theatre) {
 		Section_theatre = section_theatre;
 	}
 	
-	public int getSection_sport() {
+	public String getSection_sport() {
 		return Section_sport;
 	}
-	public void setSection_sport(int section_sport) {
+	public void setSection_sport(String section_sport) {
 		Section_sport = section_sport;
 	}
 	
-	public int getSection_internationale() {
-		return Section_internationale;
+	public String getSection_Stringernationale() {
+		return Section_Stringernationale;
 	}
-	public void setSection_internationale(int section_internationale) {
-		Section_internationale = section_internationale;
+	public void setSection_Stringernationale(String section_Stringernationale) {
+		Section_Stringernationale = section_Stringernationale;
 	}
 	
-	public int getSection_europeenne() {
+	public String getSection_europeenne() {
 		return Section_europeenne;
 	}
-	public void setSection_europeenne(int section_europeenne) {
+	public void setSection_europeenne(String section_europeenne) {
 		Section_europeenne = section_europeenne;
 	}
 	
-	public int getLycee_Agricole() {
+	public String getLycee_Agricole() {
 		return Lycee_Agricole;
 	}
-	public void setLycee_Agricole(int lycee_Agricole) {
+	public void setLycee_Agricole(String lycee_Agricole) {
 		Lycee_Agricole = lycee_Agricole;
 	}
 	
-	public int getLycee_militaire() {
+	public String getLycee_militaire() {
 		return Lycee_militaire;
 	}
-	public void setLycee_militaire(int lycee_militaire) {
+	public void setLycee_militaire(String lycee_militaire) {
 		Lycee_militaire = lycee_militaire;
 	}
 	
-	public int getLycee_des_metiers() {
+	public String getLycee_des_metiers() {
 		return Lycee_des_metiers;
 	}
-	public void setLycee_des_metiers(int lycee_des_metiers) {
+	public void setLycee_des_metiers(String lycee_des_metiers) {
 		Lycee_des_metiers = lycee_des_metiers;
 	}
 	
-	public int getPost_BAC() {
+	public String getPost_BAC() {
 		return Post_BAC;
 	}
-	public void setPost_BAC(int post_BAC) {
+	public void setPost_BAC(String post_BAC) {
 		Post_BAC = post_BAC;
 	}
 	
@@ -338,10 +336,10 @@ public class Etablissement extends ResourceSupport {
 		Appartenance_Education_Prioritaire = appartenance_Education_Prioritaire;
 	}
 	
-	public int getGRETA() {
+	public String getGRETA() {
 		return GRETA;
 	}
-	public void setGRETA(int gRETA) {
+	public void setGRETA(String gRETA) {
 		GRETA = gRETA;
 	}
 	
@@ -352,10 +350,10 @@ public class Etablissement extends ResourceSupport {
 		SIREN_SIRET = sIREN_SIRET;
 	}
 	
-	public int getNombre_d_eleves() {
+	public String getNombre_d_eleves() {
 		return Nombre_d_eleves;
 	}
-	public void setNombre_d_eleves(int nombre_d_eleves) {
+	public void setNombre_d_eleves(String nombre_d_eleves) {
 		Nombre_d_eleves = nombre_d_eleves;
 	}
 	
@@ -443,18 +441,18 @@ public class Etablissement extends ResourceSupport {
 		this.precision_localisation = precision_localisation;
 	}
 	
-	public Date getDate_ouverture() {
-		return date_ouverture;
+	public String getString_ouverture() {
+		return String_ouverture;
 	}
-	public void setDate_ouverture(Date date_ouverture) {
-		this.date_ouverture = date_ouverture;
+	public void setString_ouverture(String String_ouverture) {
+		this.String_ouverture = String_ouverture;
 	}
 	
-	public Date getDate_maj_ligne() {
-		return date_maj_ligne;
+	public String getString_maj_ligne() {
+		return String_maj_ligne;
 	}
-	public void setDate_maj_ligne(Date date_maj_ligne) {
-		this.date_maj_ligne = date_maj_ligne;
+	public void setString_maj_ligne(String String_maj_ligne) {
+		this.String_maj_ligne = String_maj_ligne;
 	}
 	
 	public String getEtat() {
@@ -471,17 +469,17 @@ public class Etablissement extends ResourceSupport {
 		this.ministere_tutelle = ministere_tutelle;
 	}
 	
-	public int getEtablissement_multi_lignes() {
+	public String getEtablissement_multi_lignes() {
 		return etablissement_multi_lignes;
 	}
-	public void setEtablissement_multi_lignes(int etablissement_multi_lignes) {
+	public void setEtablissement_multi_lignes(String etablissement_multi_lignes) {
 		this.etablissement_multi_lignes = etablissement_multi_lignes;
 	}
 	
-	public int getRpi_concentre() {
+	public String getRpi_concentre() {
 		return rpi_concentre;
 	}
-	public void setRpi_concentre(int rpi_concentre) {
+	public void setRpi_concentre(String rpi_concentre) {
 		this.rpi_concentre = rpi_concentre;
 	}
 	
@@ -492,10 +490,10 @@ public class Etablissement extends ResourceSupport {
 		this.rpi_disperse = rpi_disperse;
 	}
 	
-	public int getCode_nature() {
+	public String getCode_nature() {
 		return code_nature;
 	}
-	public void setCode_nature(int code_nature) {
+	public void setCode_nature(String code_nature) {
 		this.code_nature = code_nature;
 	}
 	
