@@ -1,10 +1,15 @@
 package ima.dao;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
+import org.springframework.data.domain.Example;
 import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
@@ -62,10 +67,27 @@ public class AnnuaireRepositoryImpl implements AnnuaireRepositoryInterface {
 	public Iterable<Etablissement> findAll() {
 		return operations.findAll(Etablissement.class, COLLECTION_NAME);
 	}
+	
+	@Override
+	public List<Etablissement> findByidentifiantdeletablissement() {
+		return operations.findAll(Etablissement.class, COLLECTION_NAME);
+	}
+	
+	@Override
+	public List<Etablissement> findBycodepostal(String cp) {
+		List<Etablissement> listEtablissement = findByidentifiantdeletablissement();
+		List<Etablissement> listEtablissementCP = new ArrayList<Etablissement>();
+		
+		for (Etablissement e : listEtablissement) {
+			if (e.getCodepostal().contains(cp)) {
+				listEtablissementCP.add(e);
+			}
+		}
+		return listEtablissementCP;
+	}
 
 	@Override
 	public Iterable<Etablissement> findAllById(Iterable<Long> ids) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -104,9 +126,4 @@ public class AnnuaireRepositoryImpl implements AnnuaireRepositoryInterface {
 //		return ret;
 //	}
 //
-//	@Override
-//	public List<Student> fetchStudents(String name) {
-//		return operations.find(new Query(Criteria.where("lastName").is(name)), Student.class, COLLECTION_NAME);
-//	}
-
 }
