@@ -41,7 +41,7 @@ public class StudentsRepositoryTest {
 		final Iterable<Etablissement> etablissements= repository.findAll();
 		
 		for (Etablissement etablissementObj : etablissements) {
-			if (etablissementObj.getIdentifiant_de_l_etablissement().equals("0170486L"))
+			if (etablissementObj.getIdentifiantdeletablissement().equals("0170486L"))
 				etablissement = etablissementObj;
 		}
 		

@@ -6,404 +6,404 @@ import org.springframework.hateoas.ResourceSupport;
 @Document
 public class Etablissement extends ResourceSupport {
 	
-	private String Identifiant_de_l_etablissement;
-	private String Nom_etablissement;
-	private String Type_etablissement;
-	private String Statut_public_prive;
-	private String Adresse_1;
-	private String Adresse_2;
-	private String Adresse_3;
-	private String Code_postal; 
-	private String Code_commune;
-	private String Nom_commune;
-	private String Code_departement;
-	private String Code_academie;
-	private String Code_region;
-	private String Ecole_maternelle; 
-	private String Ecole_elementaire;
-	private String Voie_generale;
-	private String Voie_technologique;
-	private String Voie_professionnelle;
-	private String Telephone;
-	private String Fax;
-	private String Web;
-	private String Mail;
-	private String Restauration;
-	private String Hebergement;
-	private String ULIS;
-	private String Apprentissage; 
-	private String Segpa; 
-	private String Section_arts; 
-	private String Section_cinema;	
-	private String Section_theatre;
-	private String Section_sport; 	
-	private String Section_Stringernationale;
-	private String Section_europeenne;
-	private String Lycee_Agricole;
-	private String Lycee_militaire;
-	private String Lycee_des_metiers;
-	private String Post_BAC; 
-	private String Appartenance_Education_Prioritaire;
-	private String GRETA;//TODO c'est peut etre un autre Type
-	private String SIREN_SIRET;
-	private String Nombre_d_eleves;
-	private String Fiche_onisep;
-	private String Type_contrat_prive;
-	private String Libelle_departement;
-	private String Libelle_academie;
-	private String Libelle_region;
-	private String coordonnee_X;
-	private String coordonnee_Y;
+	private String identifiantdeletablissement;
+	private String nometablissement;
+	private String typeetablissement;
+	private String statutpublicprive;
+	private String adresse1;
+	private String adresse2;
+	private String adresse3;
+	private String codepostal; 
+	private String codecommune;
+	private String nomcommune;
+	private String codedepartement;
+	private String codeacademie;
+	private String coderegion;
+	private String ecolematernelle; 
+	private String ecoleelementaire;
+	private String voiegenerale;
+	private String voietechnologique;
+	private String voieprofessionnelle;
+	private String telephone;
+	private String fax;
+	private String web;
+	private String mail;
+	private String restauration;
+	private String hebergement;
+	private String ulis;
+	private String apprentissage; 
+	private String segpa; 
+	private String sectionarts; 
+	private String sectioncinema;	
+	private String sectiontheatre;
+	private String sectionsport; 	
+	private String sectionStringernationale;
+	private String sectioneuropeenne;
+	private String lyceeAgricole;
+	private String lyceemilitaire;
+	private String lyceedesmetiers;
+	private String postBAC; 
+	private String appartenanceEducationPrioritaire;
+	private String greta;
+	private String sirenSIRET;
+	private String nombredeleves;
+	private String ficheonisep;
+	private String typecontratprive;
+	private String libelledepartement;
+	private String libelleacademie;
+	private String libelleregion;
+	private String coordonneeX;
+	private String coordonneeY;
 	private String epsg;
-	private String nom_circonscription;
+	private String nomcirconscription;
 	private String latitude;
 	private String longitude;
-	private String precision_localisation;
-	private String date_ouverture;
-	private String date_maj_ligne; 
+	private String precisionlocalisation;
+	private String dateouverture;
+	private String datemajligne; 
 	private String etat;
-	private String ministere_tutelle;
-	private String etablissement_multi_lignes;
-	private String rpi_concentre; 
-	private String rpi_disperse; 
-	private String code_nature;
-	private String libelle_nature;
+	private String ministeretutelle;
+	private String etablissementmultilignes;
+	private String rpiconcentre; 
+	private String rpidisperse; 
+	private String codenature;
+	private String libellenature;
 	
 	
-	public String getIdentifiant_de_l_etablissement() {
-		return Identifiant_de_l_etablissement;
+	public String getIdentifiantdeletablissement() {
+		return identifiantdeletablissement;
 	}
-	public void setIdentifiant_de_l_etablissement(String identifiant_de_l_etablissement) {
-		Identifiant_de_l_etablissement = identifiant_de_l_etablissement;
-	}
-	
-	public String getNom_etablissement() {
-		return Nom_etablissement;
-	}
-	public void setNom_etablissement(String nom_etablissement) {
-		Nom_etablissement = nom_etablissement;
+	public void setIdentifiantdeletablissement(String identifiantdeletablissement) {
+		this.identifiantdeletablissement = identifiantdeletablissement;
 	}
 	
-	public String getType_etablissement() {
-		return Type_etablissement;
+	public String getNometablissement() {
+		return nometablissement;
 	}
-	public void setType_etablissement(String type_etablissement) {
-		Type_etablissement = type_etablissement;
-	}
-	
-	public String getStatut_public_prive() {
-		return Statut_public_prive;
-	}
-	public void setStatut_public_prive(String statut_public_prive) {
-		Statut_public_prive = statut_public_prive;
+	public void setNometablissement(String nometablissement) {
+		this.nometablissement = nometablissement;
 	}
 	
-	public String getAdresse_1() {
-		return Adresse_1;
+	public String getTypeetablissement() {
+		return typeetablissement;
 	}
-	public void setAdresse_1(String adresse_1) {
-		Adresse_1 = adresse_1;
-	}
-	
-	public String getAdresse_2() {
-		return Adresse_2;
-	}
-	public void setAdresse_2(String adresse_2) {
-		Adresse_2 = adresse_2;
+	public void setTypeetablissement(String typeetablissement) {
+		this.typeetablissement = typeetablissement;
 	}
 	
-	public String getAdresse_3() {
-		return Adresse_3;
+	public String getStatutpublicprive() {
+		return statutpublicprive;
 	}
-	public void setAdresse_3(String adresse_3) {
-		Adresse_3 = adresse_3;
-	}
-	
-	public String getCode_postal() {
-		return Code_postal;
-	}
-	public void setCode_postal(String code_postal) {
-		Code_postal = code_postal;
+	public void setStatutpublicprive(String statutpublicprive) {
+		this.statutpublicprive = statutpublicprive;
 	}
 	
-	public String getCode_commune() {
-		return Code_commune;
+	public String getAdresse1() {
+		return adresse1;
 	}
-	public void setCode_commune(String code_commune) {
-		Code_commune = code_commune;
-	}
-	
-	public String getNom_commune() {
-		return Nom_commune;
-	}
-	public void setNom_commune(String nom_commune) {
-		Nom_commune = nom_commune;
+	public void setAdresse1(String adresse1) {
+		this.adresse1 = adresse1;
 	}
 	
-	public String getCode_departement() {
-		return Code_departement;
+	public String getAdresse2() {
+		return adresse2;
 	}
-	public void setCode_departement(String code_departement) {
-		Code_departement = code_departement;
-	}
-	
-	public String getCode_academie() {
-		return Code_academie;
-	}
-	public void setCode_academie(String code_academie) {
-		Code_academie = code_academie;
+	public void setAdresse2(String adresse2) {
+		this.adresse2 = adresse2;
 	}
 	
-	public String getCode_region() {
-		return Code_region;
+	public String getAdresse3() {
+		return adresse3;
 	}
-	public void setCode_region(String code_region) {
-		Code_region = code_region;
-	}
-	
-	public String getEcole_maternelle() {
-		return Ecole_maternelle;
-	}
-	public void setEcole_maternelle(String ecole_maternelle) {
-		Ecole_maternelle = ecole_maternelle;
+	public void setAdresse3(String adresse3) {
+		this.adresse3 = adresse3;
 	}
 	
-	public String getEcole_elementaire() {
-		return Ecole_elementaire;
+	public String getCodepostal() {
+		return codepostal;
 	}
-	public void setEcole_elementaire(String ecole_elementaire) {
-		Ecole_elementaire = ecole_elementaire;
-	}
-	
-	public String getVoie_generale() {
-		return Voie_generale;
-	}
-	public void setVoie_generale(String voie_generale) {
-		Voie_generale = voie_generale;
+	public void setCodepostal(String codepostal) {
+		this.codepostal = codepostal;
 	}
 	
-	public String getVoie_technologique() {
-		return Voie_technologique;
+	public String getCodecommune() {
+		return codecommune;
 	}
-	public void setVoie_technologique(String voie_technologique) {
-		Voie_technologique = voie_technologique;
+	public void setCodecommune(String codecommune) {
+		this.codecommune = codecommune;
 	}
 	
-	public String getVoie_professionnelle() {
-		return Voie_professionnelle;
+	public String getNomcommune() {
+		return nomcommune;
 	}
-	public void setVoie_professionnelle(String voie_professionnelle) {
-		Voie_professionnelle = voie_professionnelle;
+	public void setNomcommune(String nomcommune) {
+		this.nomcommune = nomcommune;
+	}
+	
+	public String getCodedepartement() {
+		return codedepartement;
+	}
+	public void setCodedepartement(String codedepartement) {
+		this.codedepartement = codedepartement;
+	}
+	
+	public String getCodeacademie() {
+		return codeacademie;
+	}
+	public void setCodeacademie(String codeacademie) {
+		this.codeacademie = codeacademie;
+	}
+	
+	public String getCoderegion() {
+		return coderegion;
+	}
+	public void setCoderegion(String coderegion) {
+		this.coderegion = coderegion;
+	}
+	
+	public String getEcolematernelle() {
+		return ecolematernelle;
+	}
+	public void setEcolematernelle(String ecolematernelle) {
+		this.ecolematernelle = ecolematernelle;
+	}
+	
+	public String getEcoleelementaire() {
+		return ecoleelementaire;
+	}
+	public void setEcoleelementaire(String ecoleelementaire) {
+		this.ecoleelementaire = ecoleelementaire;
+	}
+	
+	public String getVoiegenerale() {
+		return voiegenerale;
+	}
+	public void setVoiegenerale(String voiegenerale) {
+		this.voiegenerale = voiegenerale;
+	}
+	
+	public String getVoietechnologique() {
+		return voietechnologique;
+	}
+	public void setVoietechnologique(String voietechnologique) {
+		this.voietechnologique = voietechnologique;
+	}
+	
+	public String getVoieprofessionnelle() {
+		return voieprofessionnelle;
+	}
+	public void setVoieprofessionnelle(String voieprofessionnelle) {
+		this.voieprofessionnelle = voieprofessionnelle;
 	}
 	
 	public String getTelephone() {
-		return Telephone;
+		return telephone;
 	}
 	public void setTelephone(String telephone) {
-		Telephone = telephone;
+		this.telephone = telephone;
 	}
 	
 	public String getFax() {
-		return Fax;
+		return fax;
 	}
 	public void setFax(String fax) {
-		Fax = fax;
+		this.fax = fax;
 	}
 	
 	public String getWeb() {
-		return Web;
+		return web;
 	}
 	public void setWeb(String web) {
-		Web = web;
+		this.web = web;
 	}
 	
 	public String getMail() {
-		return Mail;
+		return mail;
 	}
 	public void setMail(String mail) {
-		Mail = mail;
+		this.mail = mail;
 	}
 	
 	public String getRestauration() {
-		return Restauration;
+		return restauration;
 	}
 	public void setRestauration(String restauration) {
-		Restauration = restauration;
+		this.restauration = restauration;
 	}
 	
 	public String getHebergement() {
-		return Hebergement;
+		return hebergement;
 	}
 	public void setHebergement(String hebergement) {
-		Hebergement = hebergement;
+		this.hebergement = hebergement;
 	}
 	
-	public String getULIS() {
-		return ULIS;
+	public String getUlis() {
+		return ulis;
 	}
-	public void setULIS(String uLIS) {
-		ULIS = uLIS;
+	public void setUlis(String ulis) {
+		this.ulis = ulis;
 	}
 	
 	public String getApprentissage() {
-		return Apprentissage;
+		return apprentissage;
 	}
 	public void setApprentissage(String apprentissage) {
-		Apprentissage = apprentissage;
+		this.apprentissage = apprentissage;
 	}
 	
 	public String getSegpa() {
-		return Segpa;
+		return segpa;
 	}
 	public void setSegpa(String segpa) {
-		Segpa = segpa;
+		this.segpa = segpa;
 	}
 	
-	public String getSection_arts() {
-		return Section_arts;
+	public String getSectionarts() {
+		return sectionarts;
 	}
-	public void setSection_arts(String section_arts) {
-		Section_arts = section_arts;
-	}
-	
-	public String getSection_cinema() {
-		return Section_cinema;
-	}
-	public void setSection_cinema(String section_cinema) {
-		Section_cinema = section_cinema;
+	public void setSectionarts(String sectionarts) {
+		this.sectionarts = sectionarts;
 	}
 	
-	public String getSection_theatre() {
-		return Section_theatre;
+	public String getSectioncinema() {
+		return sectioncinema;
 	}
-	public void setSection_theatre(String section_theatre) {
-		Section_theatre = section_theatre;
-	}
-	
-	public String getSection_sport() {
-		return Section_sport;
-	}
-	public void setSection_sport(String section_sport) {
-		Section_sport = section_sport;
+	public void setSectioncinema(String sectioncinema) {
+		this.sectioncinema = sectioncinema;
 	}
 	
-	public String getSection_Stringernationale() {
-		return Section_Stringernationale;
+	public String getSectiontheatre() {
+		return sectiontheatre;
 	}
-	public void setSection_Stringernationale(String section_Stringernationale) {
-		Section_Stringernationale = section_Stringernationale;
-	}
-	
-	public String getSection_europeenne() {
-		return Section_europeenne;
-	}
-	public void setSection_europeenne(String section_europeenne) {
-		Section_europeenne = section_europeenne;
+	public void setSectiontheatre(String sectiontheatre) {
+		this.sectiontheatre = sectiontheatre;
 	}
 	
-	public String getLycee_Agricole() {
-		return Lycee_Agricole;
+	public String getSectionsport() {
+		return sectionsport;
 	}
-	public void setLycee_Agricole(String lycee_Agricole) {
-		Lycee_Agricole = lycee_Agricole;
-	}
-	
-	public String getLycee_militaire() {
-		return Lycee_militaire;
-	}
-	public void setLycee_militaire(String lycee_militaire) {
-		Lycee_militaire = lycee_militaire;
+	public void setSectionsport(String sectionsport) {
+		this.sectionsport = sectionsport;
 	}
 	
-	public String getLycee_des_metiers() {
-		return Lycee_des_metiers;
+	public String getSectionStringernationale() {
+		return sectionStringernationale;
 	}
-	public void setLycee_des_metiers(String lycee_des_metiers) {
-		Lycee_des_metiers = lycee_des_metiers;
-	}
-	
-	public String getPost_BAC() {
-		return Post_BAC;
-	}
-	public void setPost_BAC(String post_BAC) {
-		Post_BAC = post_BAC;
+	public void setSectionStringernationale(String sectionStringernationale) {
+		this.sectionStringernationale = sectionStringernationale;
 	}
 	
-	public String getAppartenance_Education_Prioritaire() {
-		return Appartenance_Education_Prioritaire;
+	public String getSectioneuropeenne() {
+		return sectioneuropeenne;
 	}
-	public void setAppartenance_Education_Prioritaire(String appartenance_Education_Prioritaire) {
-		Appartenance_Education_Prioritaire = appartenance_Education_Prioritaire;
-	}
-	
-	public String getGRETA() {
-		return GRETA;
-	}
-	public void setGRETA(String gRETA) {
-		GRETA = gRETA;
+	public void setSectioneuropeenne(String sectioneuropeenne) {
+		this.sectioneuropeenne = sectioneuropeenne;
 	}
 	
-	public String getSIREN_SIRET() {
-		return SIREN_SIRET;
+	public String getLyceeAgricole() {
+		return lyceeAgricole;
 	}
-	public void setSIREN_SIRET(String sIREN_SIRET) {
-		SIREN_SIRET = sIREN_SIRET;
-	}
-	
-	public String getNombre_d_eleves() {
-		return Nombre_d_eleves;
-	}
-	public void setNombre_d_eleves(String nombre_d_eleves) {
-		Nombre_d_eleves = nombre_d_eleves;
+	public void setLyceeAgricole(String lyceeAgricole) {
+		this.lyceeAgricole = lyceeAgricole;
 	}
 	
-	public String getFiche_onisep() {
-		return Fiche_onisep;
+	public String getLyceemilitaire() {
+		return lyceemilitaire;
 	}
-	public void setFiche_onisep(String fiche_onisep) {
-		Fiche_onisep = fiche_onisep;
-	}
-	
-	public String getType_contrat_prive() {
-		return Type_contrat_prive;
-	}
-	public void setType_contrat_prive(String type_contrat_prive) {
-		Type_contrat_prive = type_contrat_prive;
+	public void setLyceemilitaire(String lyceemilitaire) {
+		this.lyceemilitaire = lyceemilitaire;
 	}
 	
-	public String getLibelle_departement() {
-		return Libelle_departement;
+	public String getLyceedesmetiers() {
+		return lyceedesmetiers;
 	}
-	public void setLibelle_departement(String libelle_departement) {
-		Libelle_departement = libelle_departement;
-	}
-	
-	public String getLibelle_academie() {
-		return Libelle_academie;
-	}
-	public void setLibelle_academie(String libelle_academie) {
-		Libelle_academie = libelle_academie;
+	public void setLyceedesmetiers(String lyceedesmetiers) {
+		this.lyceedesmetiers = lyceedesmetiers;
 	}
 	
-	public String getLibelle_region() {
-		return Libelle_region;
+	public String getPostBAC() {
+		return postBAC;
 	}
-	public void setLibelle_region(String libelle_region) {
-		Libelle_region = libelle_region;
-	}
-	
-	public String getCoordonnee_X() {
-		return coordonnee_X;
-	}
-	public void setCoordonnee_X(String coordonnee_X) {
-		this.coordonnee_X = coordonnee_X;
+	public void setPostBAC(String postBAC) {
+		this.postBAC = postBAC;
 	}
 	
-	public String getCoordonnee_Y() {
-		return coordonnee_Y;
+	public String getAppartenanceEducationPrioritaire() {
+		return appartenanceEducationPrioritaire;
 	}
-	public void setCoordonnee_Y(String coordonnee_Y) {
-		this.coordonnee_Y = coordonnee_Y;
+	public void setAppartenanceEducationPrioritaire(String appartenanceEducationPrioritaire) {
+		this.appartenanceEducationPrioritaire = appartenanceEducationPrioritaire;
+	}
+	
+	public String getGreta() {
+		return greta;
+	}
+	public void setGreta(String greta) {
+		this.greta = greta;
+	}
+	
+	public String getSirenSIRET() {
+		return sirenSIRET;
+	}
+	public void setSirenSIRET(String sirenSIRET) {
+		this.sirenSIRET = sirenSIRET;
+	}
+	
+	public String getNombredeleves() {
+		return nombredeleves;
+	}
+	public void setNombredeleves(String nombredeleves) {
+		this.nombredeleves = nombredeleves;
+	}
+	
+	public String getFicheonisep() {
+		return ficheonisep;
+	}
+	public void setFicheonisep(String ficheonisep) {
+		this.ficheonisep = ficheonisep;
+	}
+	
+	public String getTypecontratprive() {
+		return typecontratprive;
+	}
+	public void setTypecontratprive(String typecontratprive) {
+		this.typecontratprive = typecontratprive;
+	}
+	
+	public String getLibelledepartement() {
+		return libelledepartement;
+	}
+	public void setLibelledepartement(String libelledepartement) {
+		this.libelledepartement = libelledepartement;
+	}
+	
+	public String getLibelleacademie() {
+		return libelleacademie;
+	}
+	public void setLibelleacademie(String libelleacademie) {
+		this.libelleacademie = libelleacademie;
+	}
+	
+	public String getLibelleregion() {
+		return libelleregion;
+	}
+	public void setLibelleregion(String libelleregion) {
+		this.libelleregion = libelleregion;
+	}
+
+	public String getCoordonneeX() {
+		return coordonneeX;
+	}
+	public void setCoordonneeX(String coordonneeX) {
+		this.coordonneeX = coordonneeX;
+	}
+	
+	public String getCoordonneeY() {
+		return coordonneeY;
+	}
+	public void setCoordonneeY(String coordonneeY) {
+		this.coordonneeY = coordonneeY;
 	}
 	
 	public String getEpsg() {
@@ -413,11 +413,11 @@ public class Etablissement extends ResourceSupport {
 		this.epsg = epsg;
 	}
 	
-	public String getNom_circonscription() {
-		return nom_circonscription;
+	public String getNomcirconscription() {
+		return nomcirconscription;
 	}
-	public void setNom_circonscription(String nom_circonscription) {
-		this.nom_circonscription = nom_circonscription;
+	public void setNomcirconscription(String nomcirconscription) {
+		this.nomcirconscription = nomcirconscription;
 	}
 	
 	public String getLatitude() {
@@ -434,25 +434,25 @@ public class Etablissement extends ResourceSupport {
 		this.longitude = longitude;
 	}
 	
-	public String getPrecision_localisation() {
-		return precision_localisation;
+	public String getPrecisionlocalisation() {
+		return precisionlocalisation;
 	}
-	public void setPrecision_localisation(String precision_localisation) {
-		this.precision_localisation = precision_localisation;
-	}
-	
-	public String getdate_ouverture() {
-		return date_ouverture;
-	}
-	public void setDate_ouverture(String date_ouverture) {
-		this.date_ouverture = date_ouverture;
+	public void setPrecisionlocalisation(String precisionlocalisation) {
+		this.precisionlocalisation = precisionlocalisation;
 	}
 	
-	public String getdate_maj_ligne() {
-		return date_maj_ligne;
+	public String getDateouverture() {
+		return dateouverture;
 	}
-	public void setDate_maj_ligne(String date_maj_ligne) {
-		this.date_maj_ligne = date_maj_ligne;
+	public void setDateouverture(String dateouverture) {
+		this.dateouverture = dateouverture;
+	}
+	
+	public String getDatemajligne() {
+		return datemajligne;
+	}
+	public void setDatemajligne(String datemajligne) {
+		this.datemajligne = datemajligne;
 	}
 	
 	public String getEtat() {
@@ -462,45 +462,45 @@ public class Etablissement extends ResourceSupport {
 		this.etat = etat;
 	}
 	
-	public String getMinistere_tutelle() {
-		return ministere_tutelle;
+	public String getMinisteretutelle() {
+		return ministeretutelle;
 	}
-	public void setMinistere_tutelle(String ministere_tutelle) {
-		this.ministere_tutelle = ministere_tutelle;
-	}
-	
-	public String getEtablissement_multi_lignes() {
-		return etablissement_multi_lignes;
-	}
-	public void setEtablissement_multi_lignes(String etablissement_multi_lignes) {
-		this.etablissement_multi_lignes = etablissement_multi_lignes;
+	public void setMinisteretutelle(String ministeretutelle) {
+		this.ministeretutelle = ministeretutelle;
 	}
 	
-	public String getRpi_concentre() {
-		return rpi_concentre;
+	public String getEtablissementmultilignes() {
+		return etablissementmultilignes;
 	}
-	public void setRpi_concentre(String rpi_concentre) {
-		this.rpi_concentre = rpi_concentre;
-	}
-	
-	public String getRpi_disperse() {
-		return rpi_disperse;
-	}
-	public void setRpi_disperse(String rpi_disperse) {
-		this.rpi_disperse = rpi_disperse;
+	public void setEtablissementmultilignes(String etablissementmultilignes) {
+		this.etablissementmultilignes = etablissementmultilignes;
 	}
 	
-	public String getCode_nature() {
-		return code_nature;
+	public String getRpiconcentre() {
+		return rpiconcentre;
 	}
-	public void setCode_nature(String code_nature) {
-		this.code_nature = code_nature;
+	public void setRpiconcentre(String rpiconcentre) {
+		this.rpiconcentre = rpiconcentre;
 	}
 	
-	public String getLibelle_nature() {
-		return libelle_nature;
+	public String getRpidisperse() {
+		return rpidisperse;
 	}
-	public void setLibelle_nature(String libelle_nature) {
-		this.libelle_nature = libelle_nature;
+	public void setRpidisperse(String rpidisperse) {
+		this.rpidisperse = rpidisperse;
+	}
+	
+	public String getCodenature() {
+		return codenature;
+	}
+	public void setCodenature(String codenature) {
+		this.codenature = codenature;
+	}
+	
+	public String getLibellenature() {
+		return libellenature;
+	}
+	public void setLibellenature(String libellenature) {
+		this.libellenature = libellenature;
 	}
 }
