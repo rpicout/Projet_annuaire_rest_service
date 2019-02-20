@@ -29,12 +29,17 @@ public class AnnuaireController {
 	
 	@GetMapping("/etablissements")
 	public List<Etablissement> getEtablissements() {
-		return annuaireRepositoryImpl.findByidentifiantdeletablissement();
+		return annuaireRepositoryImpl.findByNometablissement();
 	}
 	
 	@GetMapping("/etablissements/{codepostal}")
 	public List<Etablissement> getEtablissementsParCP(@PathVariable String codepostal) {
-		return annuaireRepositoryImpl.findBycodepostal(codepostal);
+		return annuaireRepositoryImpl.findByCodepostal(codepostal);
+	}
+	
+	@GetMapping("/etablissement/{id}")
+	public Etablissement getEtablissementParId(@PathVariable String id) {
+		return annuaireRepositoryImpl.findByIdentifiantdeletablissement(id);
 	}
 
 }

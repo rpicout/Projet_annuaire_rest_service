@@ -6,10 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
-import org.springframework.data.domain.Example;
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
@@ -69,21 +66,38 @@ public class AnnuaireRepositoryImpl implements AnnuaireRepositoryInterface {
 	}
 	
 	@Override
-	public List<Etablissement> findByidentifiantdeletablissement() {
+	public List<Etablissement> findByNometablissement() {
 		return operations.findAll(Etablissement.class, COLLECTION_NAME);
 	}
 	
 	@Override
-	public List<Etablissement> findBycodepostal(String cp) {
-		List<Etablissement> listEtablissement = findByidentifiantdeletablissement();
-		List<Etablissement> listEtablissementCP = new ArrayList<Etablissement>();
+	public Etablissement findByIdentifiantdeletablissement(String id) {
+		List<Etablissement> listEtablissement = findByNometablissement();
+		Etablissement etablissementID = new Etablissement();
 		
-		for (Etablissement e : listEtablissement) {
-			if (e.getCodepostal().contains(cp)) {
-				listEtablissementCP.add(e);
+		if (id != null) {
+			for (Etablissement e : listEtablissement) {
+				if (e.getIdentifiantdeletablissement().equals(id)) {
+					etablissementID = e;
+				}
 			}
 		}
-		return listEtablissementCP;
+		return id != null ? etablissementID : null;
+	}
+	
+	@Override
+	public List<Etablissement> findByCodepostal(String cp) {
+		List<Etablissement> listEtablissement = findByNometablissement();
+		List<Etablissement> listEtablissementCP = new ArrayList<Etablissement>();
+		
+		if (cp != null) {
+			for (Etablissement e : listEtablissement) {
+				if (e.getCodepostal().contains(cp)) {
+					listEtablissementCP.add(e);
+				}
+			}
+		}
+		return cp != null ? listEtablissementCP : listEtablissement;
 	}
 
 	@Override
@@ -115,15 +129,4 @@ public class AnnuaireRepositoryImpl implements AnnuaireRepositoryInterface {
 		
 	}
 
-//	@Override
-//	public List<Student> fetchStudents() {
-//		final List<Student> ret = new ArrayList<Student>();
-//		
-//		// Lambda Expression
-//		// Pour chaque élément (forEach) nommé "e", je l'ajoute à la liste
-//		findAll().forEach((e) -> ret.add(e));
-//		
-//		return ret;
-//	}
-//
 }

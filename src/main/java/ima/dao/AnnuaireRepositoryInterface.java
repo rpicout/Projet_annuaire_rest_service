@@ -9,7 +9,10 @@ import ima.entities.Etablissement;
 
 public interface AnnuaireRepositoryInterface extends CrudRepository<Etablissement, Long> {
 	
-	public List<Etablissement> findBycodepostal(String cp);
-	public List<Etablissement> findByidentifiantdeletablissement();
+	public List<Etablissement> findByCodepostal(String cp);
+	
+	public List<Etablissement> findByNometablissement();
+	
+	public Etablissement findByIdentifiantdeletablissement(String id);
 
 }
