@@ -13,6 +13,6 @@ public interface AnnuaireRepositoryInterface extends CrudRepository<Etablissemen
 	
 	public List<Etablissement> findByNometablissement();
 	
-	public Etablissement findByIdentifiantdeletablissement(String id);
+	public List<Etablissement> findByIdentifiantdeletablissement(String id);
 
 }

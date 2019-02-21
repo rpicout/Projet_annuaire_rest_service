@@ -71,18 +71,18 @@ public class AnnuaireRepositoryImpl implements AnnuaireRepositoryInterface {
 	}
 	
 	@Override
-	public Etablissement findByIdentifiantdeletablissement(String id) {
+	public List<Etablissement> findByIdentifiantdeletablissement(String id) {
 		List<Etablissement> listEtablissement = findByNometablissement();
-		Etablissement etablissementID = new Etablissement();
+		List<Etablissement> etablissementID = new ArrayList<Etablissement>();
 		
 		if (id != null) {
 			for (Etablissement e : listEtablissement) {
 				if (e.getIdentifiantdeletablissement().equals(id)) {
-					etablissementID = e;
+					etablissementID.add(e);
 				}
 			}
 		}
-		return id != null ? etablissementID : null;
+		return etablissementID;
 	}
 	
 	@Override
