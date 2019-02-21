@@ -1,5 +1,6 @@
 package ima.dao;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.junit.Assert;
@@ -18,7 +19,7 @@ import ima.controller.AnnuaireController;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ActiveProfiles("mongodb")
 @ContextConfiguration(classes={MongoDBConfig.class})
-public class StudentsRepositoryTest {
+public class AnnuaireRepositoryTest {
 	
 	Logger logger = Logger.getLogger(AnnuaireController.class.getName());
 
@@ -36,20 +37,27 @@ public class StudentsRepositoryTest {
 	}
 	
 	@Test
-	public void recupererEtablissement() {
-		Etablissement etablissement = null;
-		final Iterable<Etablissement> etablissements= repository.findAll();
+	public void recupererEtablissementParCodePostal() {
+		final List<Etablissement> etablissements = repository.findByCodepostal("49");
 		
-		for (Etablissement etablissementObj : etablissements) {
-			if (etablissementObj.getIdentifiantdeletablissement().equals("0170486L"))
-				etablissement = etablissementObj;
-		}
+		Assert.assertNotNull(etablissements);
+        Assert.assertTrue(etablissements.iterator().hasNext());
+	}
+	
+	@Test
+	public void recupererEtablissementParId() {
+		final List<Etablissement> etablissement = repository.findByIdentifiantdeletablissement("0170660A");
 		
 		Assert.assertNotNull(etablissement);
+        Assert.assertTrue(!etablissement.iterator().hasNext());
 	}
-
+	
 	@Test
-	public void compterEtablissements() {
-		Assert.assertTrue(repository.count() > 0);
+	public void recupererEtablissementIdNull() {
+		final List<Etablissement> etablissement = repository.findByIdentifiantdeletablissement(null);
+		
+		Assert.assertNull(etablissement);
 	}
+	
+
 }
