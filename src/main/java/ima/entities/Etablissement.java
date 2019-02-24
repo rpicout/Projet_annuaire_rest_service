@@ -290,8 +290,8 @@ public class Etablissement extends ResourceSupport {
 	public String getSectioninternationale() {
 		return sectioninternationale;
 	}
-	public void setSectioninternationale(String sectionStringernationale) {
-		this.sectioninternationale = sectionStringernationale;
+	public void setSectioninternationale(String sectioninternationale) {
+		this.sectioninternationale = sectioninternationale;
 	}
 	
 	public String getSectioneuropeenne() {
