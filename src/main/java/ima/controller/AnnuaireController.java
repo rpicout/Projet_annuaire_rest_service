@@ -5,8 +5,10 @@ import java.util.logging.Logger;
 
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mongodb.MongoClient;
@@ -50,4 +52,8 @@ public class AnnuaireController {
 		return annuaireRepositoryImpl.findByIdentifiantdeletablissement(id);
 	}
 
+	@PostMapping("/etablissements/post/{etablissement}")
+    public void ModifierEtablissement(@PathVariable Etablissement etablissement) {
+    	annuaireRepositoryImpl.save(etablissement);
+    }
 }
