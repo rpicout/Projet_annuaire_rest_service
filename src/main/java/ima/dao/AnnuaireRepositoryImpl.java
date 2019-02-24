@@ -83,7 +83,7 @@ public class AnnuaireRepositoryImpl implements AnnuaireRepositoryInterface {
 			}
 		}
 		return etablissementID;
-	}
+	}	
 	
 	@Override
 	public List<Etablissement> findByCodepostal(String cp) {
@@ -92,7 +92,12 @@ public class AnnuaireRepositoryImpl implements AnnuaireRepositoryInterface {
 		
 		if (cp != null) {
 			for (Etablissement e : listEtablissement) {
-				if (e.getCodepostal().contains(cp)) {
+				if (cp.startsWith("0")) {
+					if (e.getCodepostal().length() == 4 && e.getCodepostal().startsWith(cp.substring(1))) {
+						listEtablissementCP.add(e);
+					}
+				}
+				else if (e.getCodepostal().startsWith(cp)) {
 					listEtablissementCP.add(e);
 				}
 			}
