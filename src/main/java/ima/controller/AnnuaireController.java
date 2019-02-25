@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mongodb.MongoClient;
@@ -52,8 +53,8 @@ public class AnnuaireController {
 		return annuaireRepositoryImpl.findByIdentifiantdeletablissement(id);
 	}
 
-	@PostMapping("/etablissements/post/{etablissement}")
-    public void ModifierEtablissement(@PathVariable Etablissement etablissement) {
+	@PostMapping("/etablissements/update/{id}")
+    public void ModifierEtablissement(@PathVariable String id, @RequestBody Etablissement etablissement) {
     	annuaireRepositoryImpl.save(etablissement);
     }
 }
